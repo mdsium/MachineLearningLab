@@ -15,10 +15,8 @@ i = 5
 
 print("Initial value of i:", i)
 
-# Pre-increment simulation
-i = pre_increment(i)  # should print 6
+i = pre_increment(i)  
 
-# Post-increment simulation
-i = post_increment(i)  # should print 6 before increment, i becomes 7
+i = post_increment(i)  
 
 print("Final value of i after both operations:", i)
