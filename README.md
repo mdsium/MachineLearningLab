@@ -2,7 +2,7 @@
 
 # Python Practice Tasks
 
-A consolidated set of beginner-friendly Python exercises with short, runnable code snippets. Use them one by one or copy into your editor.
+A consolidated set of Python exercises with short, runnable code snippets. Use them one by one or copy into your editor.
 
 ---
 
@@ -12,8 +12,8 @@ A consolidated set of beginner-friendly Python exercises with short, runnable co
 
 ```python
 name = "Md. Sium"
-department = "CSE"
-university = "Your University Name"
+department = "Computer Science and Engineering (CSE)"
+university = "Green University of Bangladesh"
 
 print("Name:", name)
 print("Department:", department)
