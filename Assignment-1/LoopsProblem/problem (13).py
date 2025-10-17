@@ -1,0 +1,5 @@
+n = int(input("n: "))
+x = abs(n)
+rev = int(str(x)[::-1])
+is_pal = (rev == x) and (n >= 0)  
+print("Palindrome" if is_pal else "Not Palindrome")

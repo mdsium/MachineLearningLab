@@ -1,0 +1,6 @@
+n = int(input("n: "))
+x = abs(n)
+digits = list(map(int, str(x)))
+k = len(digits)
+arm = sum(d ** k for d in digits)
+print("Armstrong" if arm == x and n >= 0 else "Not Armstrong")
