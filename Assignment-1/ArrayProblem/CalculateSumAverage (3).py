@@ -1,0 +1,5 @@
+arr = list(map(int, input("Enter elements separated by space: ").split()))
+total = sum(arr)
+avg = total / len(arr)
+print("Sum =", total)
+print("Average =", avg)
