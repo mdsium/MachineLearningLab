@@ -2,7 +2,7 @@
 
 
 **Lab:** LabReport01 — CSE412-223E2
-**Author:** <Md. Sium> 
+**Author:** Md. Sium
 
 
 ## Overview
@@ -21,13 +21,9 @@ This repository contains the lab report and code for Diabetes Prediction using L
 3. Run the notebook or script.
 
 
-## Preprocessing steps (as required by the assignment)
-[Summarize steps exactly as in the lab instructions]
+## Preprocessing steps
+
 
 
 ## Results
 [Paste evaluation metrics and confusion matrix here after running the code]
-
-
-## License
-[Your choice — e.g., MIT]
