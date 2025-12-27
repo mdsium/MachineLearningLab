@@ -1,60 +1,37 @@
-# Iris Flower Classification with K-Nearest Neighbors (KNN)
-
-This repository contains a complete implementation of the classic Iris flower classification problem using the **K-Nearest Neighbors (KNN)** algorithm. The project explores data preprocessing, model training, hyperparameter tuning, and performance evaluation across different train-test split ratios and values of *k*.
+# Bangladeshi News Classification using Naive Bayes
 
 ## Project Overview
+This repository contains a binary text classification project that uses **Naive Bayes** to classify Bangladeshi news headlines and descriptions into two categories: **Politics** and **Sports**.
 
-- Dataset: Iris (150 samples, 4 features, 3 classes)
-- Preprocessing: Min-Max scaling, no missing values
-- Model: KNN (from scratch)
-- Hyperparameters tested: k = 1, 3, 5, 7, 9, 11, 13, 15
-- Train-test splits: 50:50, 60:40, 70:30, 80:20
-- Metrics: Accuracy, Precision, Recall, F1-score (macro), Confusion Matrix
-- Best performance: **97.78% accuracy** (70:30 split, k=7 to 15)
+The dataset consists of 100 real news samples (50 politics, 50 sports) collected from major Bangladeshi newspapers and international sources reporting on Bangladesh, reflecting events around late December 2025 (e.g., Tarique Rahman's return, BPL 2025-26 cricket tournament).
 
-## Dataset
+The Jupyter notebook demonstrates a complete machine learning pipeline:
+- Data loading and exploration
+- Text preprocessing (lowercase, punctuation/number removal, stopword removal, lemmatization)
+- Feature extraction
+- Train-test split
+- Naive Bayes model training
+- Evaluation with accuracy and confusion matrix
+- Optional visualization using PCA and seaborn
 
-The Iris dataset is a well-known benchmark in machine learning, containing 150 samples from three Iris species:
-- Iris-setosa
-- Iris-versicolor
-- Iris-virginica
+## Repository Files
 
-Each sample has 4 numerical features:
-- sepal_length (cm)
-- sepal_width (cm)
-- petal_length (cm)
-- petal_width (cm)
+- **`News_data_set.csv`**  
+  The main dataset with 100 rows and 3 columns:
+  - `title`: News headline
+  - `description`: Short news description
+  - `label`: Category (`politics` or `sports`)
 
-The dataset is perfectly balanced (50 samples per class) with no missing values.
-
-## Project Goals
-
-- Preprocess the data (Min-Max scaling)
-- Split the dataset into train/test sets using multiple ratios: 50:50, 60:40, 70:30, 80:20
-- Train KNN models with varying *k* values (1, 3, 5, 7, 9, 11, 13, 15)
-- Evaluate performance using accuracy, precision, recall, F1-score, and confusion matrix
-- Identify the optimal *k* and split ratio
-
-## Results Summary
-
-The KNN classifier achieves near-perfect performance on the Iris dataset, with the best results on the 70:30 split.
-
-| Train:Test Ratio | Best k | Accuracy | Macro F1-Score | Notes |
-|------------------|--------|----------|----------------|-------|
-| 50:50            | 7–9    | 97.33%   | 0.9753         | Minor misclassifications between versicolor & virginica |
-| 60:40            | 7–11   | 96.67%   | 0.9702         | Consistent high performance |
-| 70:30            | 7–15   | 97.78%   | 0.9810         | **Optimal** – excellent generalization |
-| 80:20            | 9–15   | 96.67%   | 0.9710         | Very reliable but smaller test set |
-
-**Optimal configuration**: 70:30 split with *k* = 7 (or any odd value from 7–15)
-
-Misclassifications occur only between *Iris-versicolor* and *Iris-virginica* (setosa is always perfectly classified).
-
+  Example:
+  ```csv
+  title,description,label
+  Tarique Rahman Returns After 17 Years in Exile,"BNP acting chairman Tarique Rahman arrives in Dhaka from London, greeted by massive crowds ahead of February elections.",politics
+  BPL 2025-26 Kicks Off in Sylhet,"Season starts with Sylhet Titans vs Rajshahi Warriors amid organizational challenges.",sports
 ## Files in this Repository
 
 | File                  | Description |
 |-----------------------|-------------|
-| `iris.csv`            | The Iris dataset (included) |
-| `knn_iris_classification.ipynb` | full implementation, preprocessing, training, and evaluation |
+| `News_data_set.csv`   | The News_data_set |
+| `CSE412_223E2_LabReport03_NaïveBayes.ipynb` | full implementation, preprocessing, training, and evaluation |
 | `README.md`           | This file |
 
